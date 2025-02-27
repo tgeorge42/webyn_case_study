@@ -16,6 +16,10 @@ build:
 run:
 	cd $(BACKEND_DIR) && symfony server:start --port=$(APP_PORT)
 
+# Lancer le test unitaire
+test:
+	cd $(BACKEND_DIR) && php bin/phpunit
+
 # Arrêter le serveur
 stop:
 	symfony server:stop
