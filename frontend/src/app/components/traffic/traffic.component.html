@@ -1,0 +1,17 @@
+<h2>Traffic Data</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Page URL</th>
+      <th>Traffic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of trafficData">
+      <td>{{ item.page_id }}</td>
+      <td>{{ item.page_url }}</td>
+      <td>{{ item.traffic }}</td>
+    </tr>
+  </tbody>
+</table>
