@@ -1,15 +1,21 @@
 <h2>Traffic Data</h2>
+
+<!-- Champ de filtre -->
+<div class="filter">
+  <label for="threshold">Minimum Traffic:</label>
+  <input type="number" id="threshold" [(ngModel)]="trafficThreshold" />
+</div>
+
+<!-- Tableau -->
 <table>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Page URL</th>
       <th>Traffic</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of trafficData">
-      <td>{{ item.page_id }}</td>
+    <tr *ngFor="let item of filteredTrafficData">
       <td>{{ item.page_url }}</td>
       <td>{{ item.traffic }}</td>
     </tr>

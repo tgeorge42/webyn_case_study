@@ -13,3 +13,13 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
+
+.filter {
+    margin-bottom: 10px;
+}
+
+.filter input {
+    margin-left: 10px;
+    padding: 5px;
+    width: 80px;
+}
