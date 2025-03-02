@@ -63,6 +63,8 @@ An API that returns the data for the traffic of a website
 
 A dashboard to visualize those data, with a filter to only see the data above a certain threshold
 
+make test to launch a basic unit test
+
 Technologies Used :
 
 Frontend: Angular
