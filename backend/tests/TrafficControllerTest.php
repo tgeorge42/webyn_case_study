@@ -10,19 +10,14 @@ class TrafficControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        // Effectuer une requête GET sur l'API
         $client->request('GET', '/api/traffic');
 
-        // Vérifier que la réponse est un succès (code 200)
         $this->assertResponseIsSuccessful();
 
-        // Vérifier que la réponse est bien au format JSON
         $this->assertResponseHeaderSame('content-type', 'application/json');
 
-        // Récupérer le contenu JSON
         $responseData = json_decode($client->getResponse()->getContent(), true);
 
-        // Vérifier que la structure des données est correcte
         $this->assertIsArray($responseData);
         $this->assertCount(5, $responseData);
 

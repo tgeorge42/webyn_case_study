@@ -1,12 +1,10 @@
-<h2>Traffic Data</h2>
+<h2>📊 Traffic Data</h2>
 
-<!-- Champ de filtre -->
 <div class="filter">
   <label for="threshold">Minimum Traffic:</label>
   <input type="number" id="threshold" [(ngModel)]="trafficThreshold" />
 </div>
 
-<!-- Tableau -->
 <table>
   <thead>
     <tr>
@@ -21,3 +19,7 @@
     </tr>
   </tbody>
 </table>
+
+<p *ngIf="filteredTrafficData.length === 0" class="no-data">
+  No traffic data above this threshold.
+</p>

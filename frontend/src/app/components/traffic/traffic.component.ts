@@ -8,12 +8,11 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './traffic.component.html',
   styleUrls: ['./traffic.component.css'],
-  imports: [CommonModule, FormsModule] // Ajout de FormsModule pour ngModel
+  imports: [CommonModule, FormsModule]
 })
-
 export class TrafficComponent implements OnInit {
   trafficData: any[] = [];
-  trafficThreshold: number = 0; // Valeur par défaut du filtre
+  trafficThreshold: number = 0;
 
   constructor(private trafficService: TrafficService) {}
 
@@ -28,7 +27,6 @@ export class TrafficComponent implements OnInit {
     );
   }
 
-  // Méthode pour filtrer les données
   get filteredTrafficData() {
     return this.trafficData.filter(item => item.traffic > this.trafficThreshold);
   }
