@@ -43,6 +43,8 @@ PANTHER_APP_ENV=panther
 
 PANTHER_ERROR_SCREENSHOT_DIR=./var/error-screenshots
 
+Also add an empty .env.dev 
+
 
 ### 3. Install Dependencies and start the project
 
