@@ -2,6 +2,12 @@ FROM php:8.2-apache
 
 RUN docker-php-ext-install pdo pdo_mysql
 
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    zip \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash && \
